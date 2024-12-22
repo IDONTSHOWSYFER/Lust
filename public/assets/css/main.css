@@ -482,6 +482,7 @@ body.light .footer .social a:hover {
 
 .service-item {
     flex: 1 1 300px;
+    color: #000000;
     background: var(--primary-color);
     padding: 30px 20px;
     text-align: center;
