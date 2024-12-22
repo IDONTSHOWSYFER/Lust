@@ -1,0 +1,9 @@
+{
+  "name": "estebanluiz",
+  "version": "1.0.0",
+  "lockfileVersion": 3,
+  "requires": true,
+  "dependencies": {
+    "gsap": "^3.12.5"
+  }
+}

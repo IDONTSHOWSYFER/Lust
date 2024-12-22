@@ -1,12 +1,11 @@
-<!-- templates/blog.html -->
 <!DOCTYPE html>
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Blog - Esteban Luiz</title>
-  <meta name="description" content="Découvrez les articles de blog d'Esteban Luiz, photographe professionnel spécialisé en portrait, nature, architecture et événements.">
-  <meta name="keywords" content="blog, photographie, portrait, nature, architecture, événements, Esteban Luiz">
+  <title>Merci - Esteban Luiz</title>
+  <meta name="description" content="Merci d'avoir contacté Esteban Luiz. Votre message a été envoyé avec succès.">
+  <meta name="keywords" content="merci, contact, Esteban Luiz">
   <meta name="author" content="Esteban Luiz">
   <link rel="icon" href="/public/assets/img/favicon.ico" type="image/x-icon">
   
@@ -29,39 +28,31 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   
-  <!-- EmailJS -->
-  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
-  <script>
-    (function(){
-      emailjs.init("YOUR_USER_ID"); // Remplacez "YOUR_USER_ID" par votre ID utilisateur EmailJS
-    })();
-  </script>
-  
   <!-- Schema.org JSON-LD -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "Blog",
-    "name": "Blog d'Esteban Luiz",
-    "url": "https://www.estebanluizphotographie.com/blog",
-    "description": "Le blog d'Esteban Luiz, photographe professionnel partage ses conseils, inspirations et actualités sur la photographie de portrait, nature, architecture et événements."
+    "@type": "WebPage",
+    "name": "Merci - Esteban Luiz",
+    "url": "https://www.estebanluizphotographie.com/thankyou.html",
+    "description": "Page de remerciement après l'envoi d'un message à Esteban Luiz, photographe professionnel."
   }
   </script>
 </head>
 <body>
   <header class="header">
     <div class="container">
-      <h1 class="logo"><a href="../index.html">ESTEBAN LUIZ</a></h1>
+      <h1 class="logo"><a href="index.html">ESTEBAN LUIZ</a></h1>
       <nav class="nav" aria-label="Menu de navigation">
         <ul>
-          <li><a href="../index.html#home">Accueil</a></li>
-          <li><a href="../index.html#portfolio">Portfolio</a></li>
-          <li><a href="../index.html#services">Services</a></li>
-          <li><a href="../index.html#testimonials">Témoignages</a></li>
+          <li><a href="index.html#home">Accueil</a></li>
+          <li><a href="index.html#portfolio">Portfolio</a></li>
+          <li><a href="index.html#services">Services</a></li>
+          <li><a href="index.html#testimonials">Témoignages</a></li>
           <li><a href="blog.html">Blog</a></li>
-          <li><a href="../index.html#instagram">Instagram</a></li>
-          <li><a href="../index.html#about">À propos</a></li>
-          <li><a href="../index.html#contact">Contact</a></li>
+          <li><a href="index.html#instagram">Instagram</a></li>
+          <li><a href="index.html#about">À propos</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
         </ul>
       </nav>
       <!-- Bouton Hamburger avec 3 spans -->
@@ -73,35 +64,11 @@
     </div>
   </header>
 
-  <section class="blog-section" id="blog-section">
+  <section class="thankyou-section" id="thankyou-section">
     <div class="container">
-      <h2 data-aos="fade-up">Bienvenue sur mon Blog</h2>
-      <div class="blog-grid" data-aos="fade-up" data-aos-delay="200">
-        <article class="blog-post">
-          <img src="/public/assets/img/blog1.jpg" alt="Les Meilleures Techniques pour la Photographie de Portrait" loading="lazy">
-          <div class="blog-content">
-            <h3>Les Meilleures Techniques pour la Photographie de Portrait</h3>
-            <p>Découvrez les astuces professionnelles pour capturer des portraits saisissants. De l'éclairage à la composition, apprenez comment mettre en valeur vos sujets et créer des images mémorables.</p>
-            <a href="thankyou.html" class="btn">Lire la suite</a>
-          </div>
-        </article>
-        <article class="blog-post">
-          <img src="/public/assets/img/blog2.jpg" alt="Explorer la Photographie de Nature : Conseils et Inspirations" loading="lazy">
-          <div class="blog-content">
-            <h3>Explorer la Photographie de Nature : Conseils et Inspirations</h3>
-            <p>Plongez dans le monde de la photographie de nature avec ces conseils essentiels. Apprenez à capturer la beauté sauvage et à immortaliser les paysages époustouflants.</p>
-            <a href="thankyou.html" class="btn">Lire la suite</a>
-          </div>
-        </article>
-        <article class="blog-post">
-          <img src="/public/assets/img/blog3.jpg" alt="Photographie d'Architecture : Capturer l'Essence des Structures" loading="lazy">
-          <div class="blog-content">
-            <h3>Photographie d'Architecture : Capturer l'Essence des Structures</h3>
-            <p>Apprenez comment mettre en valeur les lignes et les formes des bâtiments avec des techniques avancées de photographie d'architecture. Transformez vos clichés en œuvres d'art.</p>
-            <a href="thankyou.html" class="btn">Lire la suite</a>
-          </div>
-        </article>
-      </div>
+      <h2 data-aos="fade-up">Merci !</h2>
+      <p data-aos="fade-up" data-aos-delay="200">Votre message a été envoyé avec succès. Je vous recontacterai bientôt.</p>
+      <a href="index.html" class="btn" data-aos="fade-up" data-aos-delay="400">Retour à l'accueil</a>
     </div>
   </section>
 

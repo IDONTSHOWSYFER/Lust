@@ -1,21 +1,21 @@
-/* /Users/syfer/VsCode/EstebanLuiz/public/assets/css/main.css */
+/* public/assets/css/main.css */
 
 /* Variables de Couleurs */
 :root {
-    --primary-color: #ffffff;
-    --secondary-color: #000000;
+    --primary-color: #ffffff; /* Texte en mode nuit */
+    --secondary-color: #000000; /* Fond en mode nuit */
     --accent-color: #007aff;
-    --background-color: #f5f5f5;
+    --background-color: #f5f5f5; /* Fond en mode jour */
     --font-family: 'Roboto', sans-serif;
     --transition-speed: 0.3s;
     --max-width: 1200px;
 }
 
-body.dark {
-    --primary-color: #000000;
-    --secondary-color: #ffffff;
-    --accent-color: #1e90ff;
-    --background-color: #1e1e1e;
+body.light {
+    --primary-color: #000000; /* Texte en mode jour */
+    --secondary-color: #ffffff; /* Fond en mode jour */
+    --accent-color: #007aff;
+    --background-color: #ffffff; /* Fond en mode jour */
 }
 
 /* Reset de Base */
@@ -45,6 +45,7 @@ img {
 
 /* Container */
 .container {
+    position: relative;
     width: 90%;
     max-width: var(--max-width);
     margin: 0 auto;
@@ -57,11 +58,16 @@ img {
     top: 0;
     left: 0;
     width: 100%;
-    background: rgba(0, 0, 0, 0.95);
-    box-shadow: 0 2px 4px rgba(255, 255, 255, 0.1);
+    background: rgba(var(--secondary-color), 0.95);
+    box-shadow: 0 2px 4px rgba(var(--primary-color), 0.1);
     z-index: 2000;
     transition: background var(--transition-speed), box-shadow var(--transition-speed);
     padding: 10px 20px;
+}
+
+body.light .header {
+    background: rgba(var(--secondary-color), 0.95);
+    box-shadow: 0 2px 4px rgba(var(--primary-color), 0.1);
 }
 
 .header.scrolled {
@@ -94,55 +100,101 @@ img {
     color: var(--accent-color);
 }
 
-/* Menu Hamburger */
+/* Menu Hamburger avec 3 spans */
 .hamburger {
     display: none; /* Caché sur écrans larges */
     background: none;
     border: none;
-    color: var(--primary-color);
-    font-size: 1.8rem;
     cursor: pointer;
-    transition: transform var(--transition-speed);
     position: absolute;
     top: 50%;
     right: 20px;
     transform: translateY(-50%);
-    z-index: 2100; /* Assurer qu'il est au-dessus des autres éléments */
+    z-index: 2100;
+    width: 30px;
+    height: 22px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 0;
 }
 
-.hamburger.active .fa-bars {
-    transform: rotate(90deg);
+.hamburger .bar {
+    display: block;
+    width: 100%;
+    height: 4px;
+    background-color: var(--primary-color);
+    border-radius: 2px;
+    transition: all var(--transition-speed) ease;
 }
 
-/* Bouton de Bascule Thème Sombre */
+.hamburger.active .bar:nth-child(1) {
+    transform: translateY(9px) rotate(45deg);
+}
+
+.hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active .bar:nth-child(3) {
+    transform: translateY(-9px) rotate(-45deg);
+}
+
+/* Bouton de Bascule Thème */
 #theme-toggle {
-    display: none;
     position: fixed;
     bottom: 40px;
     left: 40px;
-    background: var(--accent-color);
-    color: var(--secondary-color);
+    background: var(--secondary-color);
+    color: var(--primary-color);
     border: none;
     border-radius: 50%;
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
     cursor: pointer;
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
     transition: background var(--transition-speed), transform var(--transition-speed), opacity var(--transition-speed);
     z-index: 2100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
+
+#theme-toggle i {
+    font-size: 1rem;
+    display: none;
+}
+
+#theme-toggle i.fa-sun {
+    display: none;
+}
+
+body.light #theme-toggle i.fa-sun {
+    display: block;
+}
+
+body:not(.light) #theme-toggle i.fa-moon {
+    display: block;
+}
+
+body.light #theme-toggle i.fa-moon {
+    display: none;
+}
+
+#theme-toggle.active {
+    background: var(--secondary-color);
+    color: var(--primary-color);
+}
+
 #theme-toggle:hover {
     background: #005bb5;
     transform: translateY(-5px);
-}
-#theme-toggle i {
-    font-size: 1.2rem;
 }
 
 /* Afficher le hamburger et le bouton de bascule sur tablettes/mobiles */
 @media (max-width: 992px) {
     .hamburger {
-        display: block;
+        display: flex;
     }
     .nav ul {
         flex-direction: column;
@@ -160,6 +212,13 @@ img {
     }
     .nav ul li {
         margin: 15px 0;
+    }
+}
+
+/* Afficher le bouton de bascule thème sur tous les écrans, positionné correctement */
+@media (min-width: 993px) {
+    #theme-toggle {
+        display: block;
     }
 }
 
@@ -183,10 +242,23 @@ img {
     color: var(--accent-color);
 }
 
+body.light .footer {
+    background: var(--secondary-color);
+    color: var(--primary-color);
+}
+
+body.light .footer .social a {
+    color: var(--primary-color);
+}
+
+body.light .footer .social a:hover {
+    color: var(--accent-color);
+}
+
 /* Hero Section */
 .hero {
     height: 100vh;
-    background: url('/public/assets/img/img-v0-min.jpg') center center/cover no-repeat;
+    background: url('../img/img-v0-min.jpg') center center/cover no-repeat;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -242,6 +314,10 @@ img {
 }
 
 /* Portfolio Section */
+.portfolio {
+    background: var(--secondary-color);
+}
+
 .portfolio h2 {
     position: relative;
     text-align: center;
@@ -293,61 +369,53 @@ img {
 }
 
 /* Boutons custom (paysage, portrait, etc.) */
-.landscape-btn {
+.landscape-btn,
+.portrait-btn,
+.architecture-btn,
+.events-btn {
     padding: 10px 20px;
     margin: 0 10px;
     border: none;
-    background: #00cb47;
-    color: var(--secondary-color);
     cursor: pointer;
     border-radius: 20px;
     transition: background var(--transition-speed);
 }
+
+.landscape-btn {
+    background: #00cb47;
+    color: var(--secondary-color);
+}
+
 .landscape-btn:hover,
 .landscape-btn.active {
     background: #00b840;
 }
 
 .portrait-btn {
-    padding: 10px 20px;
-    margin: 0 10px;
-    border: none;
     background: #eeff00;
     color: rgb(0, 0, 0);
-    cursor: pointer;
-    border-radius: 20px;
-    transition: background var(--transition-speed);
 }
+
 .portrait-btn:hover,
 .portrait-btn.active {
     background: #ffef10;
 }
 
 .architecture-btn {
-    padding: 10px 20px;
-    margin: 0 10px;
-    border: none;
     background: #fffffc;
     color: rgb(0, 0, 0);
-    cursor: pointer;
-    border-radius: 20px;
-    transition: background var(--transition-speed);
 }
+
 .architecture-btn:hover,
 .architecture-btn.active {
     background: #fbff00;
 }
 
 .events-btn {
-    padding: 10px 20px;
-    margin: 0 10px;
-    border: none;
     background: #ff00d9;
     color: white;
-    cursor: pointer;
-    border-radius: 20px;
-    transition: background var(--transition-speed);
 }
+
 .events-btn:hover,
 .events-btn.active {
     background: #ff00d058;
@@ -376,12 +444,18 @@ img {
     object-fit: cover;
     transition: transform var(--transition-speed), filter var(--transition-speed);
 }
+
 .swiper-slide.gallery-item:hover img {
     transform: scale(1.1);
     filter: brightness(80%);
 }
 
 /* Services Section */
+
+.services {
+    background-color: var(--secondary-color);
+}
+
 .services h2 {
     position: relative;
     text-align: center;
@@ -406,34 +480,47 @@ img {
     gap: 20px;
     justify-content: center;
 }
+
 .service-item {
     flex: 1 1 300px;
-    background: var(--secondary-color);
+    background: var(--primary-color);
     padding: 30px 20px;
     text-align: center;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgb(255, 255, 255);
     transition: transform var(--transition-speed), box-shadow var(--transition-speed);
 }
+
+body.light .service-item {
+    background: var(--secondary-color);
+}
+
 .service-item:hover {
     transform: translateY(-10px);
     box-shadow: 0 6px 10px rgba(0,0,0,0.15);
 }
+
 .service-item i {
     font-size: 2.5rem;
     color: var(--accent-color);
     margin-bottom: 20px;
 }
+
 .service-item h3 {
     font-size: 1.5rem;
     margin-bottom: 15px;
 }
+
 .service-item p {
     font-size: 1rem;
     color: #b9b9b9;
 }
 
 /* Testimonials Section */
+.testimonials {
+    background: var(--secondary-color);
+}
+
 .testimonials h2 {
     position: relative;
     text-align: center;
@@ -458,7 +545,7 @@ img {
     overflow: hidden;
 }
 .swiper-slide.testimonial-item {
-    background: var(--background-color);
+    background: var(--secondary-color);
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
@@ -487,6 +574,7 @@ img {
 
 /* Blog Section */
 .blog {
+    background: var(--secondary-color);
     padding: 100px 0;
 }
 
@@ -518,12 +606,21 @@ img {
 }
 .blog-post {
     flex: 1 1 300px;
-    background: var(--secondary-color);
+    background: var(--primary-color);
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
     transition: transform var(--transition-speed), box-shadow var(--transition-speed);
 }
+
+body.light .blog-post {
+    background: var(--secondary-color);
+}
+
+body.light .hero-content h2 {
+    color: #ffffff; /* Blanc */
+}
+
 .blog-post:hover {
     transform: translateY(-5px);
     box-shadow: 0 6px 10px rgba(0,0,0,0.15);
@@ -557,6 +654,7 @@ img {
 }
 
 /* Instagram Feed Section */
+
 .instagram-feed {
     padding: 100px 0;
     background: var(--secondary-color);
@@ -600,6 +698,7 @@ img {
 /* About Section */
 .about {
     padding: 100px 0;
+    background: var(--secondary-color);
 }
 .about h2 {
     text-align: center;
@@ -809,15 +908,16 @@ textarea:focus {
     cursor: pointer;
     transition: background-color var(--transition-speed), transform var(--transition-speed), opacity var(--transition-speed);
     animation: rotateColors 5s linear infinite;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-/* Effet au survol */
 #scrollToTopBtn:hover {
     background-color: #005bb5;
     transform: translateY(-5px);
 }
 
-/* Icône du bouton */
 #scrollToTopBtn i {
     font-size: 1.5rem;
 }
@@ -904,7 +1004,7 @@ textarea:focus {
         grid-template-columns: 1fr;
     }
     #theme-toggle {
-        display: none;
+        display: block; /* Assurer qu'il est visible sur petits écrans */
     }
 }
 
@@ -925,4 +1025,15 @@ textarea:focus {
 @keyframes zoomIn {
     from { transform: scale(0.7); opacity: 0; }
     to { transform: scale(1); opacity: 1; }
+}
+@keyframes rotateColors {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
 }
