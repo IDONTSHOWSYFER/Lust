@@ -7,8 +7,9 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // Initialisation Swiper pour Portfolio
+  let portfolioSwiper;
   if (typeof Swiper !== 'undefined') {
-    const portfolioSwiper = new Swiper('.portfolio-swiper', {
+    portfolioSwiper = new Swiper('.portfolio-swiper', {
       slidesPerView: 3,
       spaceBetween: 20,
       loop: true,
@@ -39,20 +40,32 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Gestion du Formulaire de Contact
+  // Gestion du Formulaire de Contact avec EmailJS
   const form = document.getElementById('contact-form');
   if (form) {
     form.addEventListener('submit', (e) => {
       e.preventDefault();
+
+      // Vérification des champs
       const name = document.getElementById('name').value.trim();
       const email = document.getElementById('email').value.trim();
       const message = document.getElementById('message').value.trim();
+
       if (!name || !email || !message) {
         alert('Veuillez remplir tous les champs.');
         return;
       }
-      alert('Merci pour votre message ! Je vous recontacterai bientôt.');
-      form.reset();
+
+      // Envoi du formulaire via EmailJS
+      emailjs.sendForm('service_v60hg29', 'template_ekdr0iw', form)
+        .then((response) => {
+          console.log('SUCCESS!', response.status, response.text);
+          alert('Merci pour votre message ! Je vous recontacterai bientôt.');
+          form.reset();
+        }, (error) => {
+          console.error('FAILED...', error);
+          alert('Erreur lors de l\'envoi du message. Veuillez réessayer.');
+        });
     });
   }
 
@@ -126,7 +139,7 @@ document.addEventListener('DOMContentLoaded', () => {
       filterButtons.forEach(btn => btn.classList.remove('active'));
       button.classList.add('active');
       const filter = button.getAttribute('data-filter');
-      if (typeof portfolioSwiper !== 'undefined') {
+      if (portfolioSwiper) {
         portfolioSwiper.slideToLoop(0);
       }
       galleryItems.forEach(item => {
@@ -249,15 +262,15 @@ document.addEventListener('DOMContentLoaded', () => {
       const sunIcon = themeToggle.querySelector('.fa-sun');
       const moonIcon = themeToggle.querySelector('.fa-moon');
       if (document.body.classList.contains('light')) {
-        sunIcon.style.display = 'block';
-        moonIcon.style.display = 'none';
+        sunIcon.style.display = 'none';
+        moonIcon.style.display = 'block';
         // Animation avec GSAP (facultatif)
         if (typeof gsap !== 'undefined') {
           gsap.to('.header', { backgroundColor: 'rgba(255, 255, 255, 0.95)', duration: 0.5 });
         }
       } else {
-        sunIcon.style.display = 'none';
-        moonIcon.style.display = 'block';
+        sunIcon.style.display = 'block';
+        moonIcon.style.display = 'none';
         // Animation avec GSAP (facultatif)
         if (typeof gsap !== 'undefined') {
           gsap.to('.header', { backgroundColor: 'rgba(0, 0, 0, 0.95)', duration: 0.5 });
@@ -278,15 +291,15 @@ document.addEventListener('DOMContentLoaded', () => {
         gsap.to('.header', { backgroundColor: 'rgba(0, 0, 0, 0.95)', duration: 0.5 });
       }
     } else {
-      // Default to dark mode
-      document.body.classList.remove('light');
-      themeToggle.classList.remove('active');
+      // Default to light mode
+      document.body.classList.add('light');
+      themeToggle.classList.add('active');
       const sunIcon = themeToggle.querySelector('.fa-sun');
       const moonIcon = themeToggle.querySelector('.fa-moon');
-      sunIcon.style.display = 'block';
-      moonIcon.style.display = 'none';
+      sunIcon.style.display = 'none';
+      moonIcon.style.display = 'block';
       if (typeof gsap !== 'undefined') {
-        gsap.to('.header', { backgroundColor: 'rgba(0, 0, 0, 0.95)', duration: 0.5 });
+        gsap.to('.header', { backgroundColor: 'rgba(255, 255, 255, 0.95)', duration: 0.5 });
       }
     }
   }
