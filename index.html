@@ -1,0 +1,269 @@
+<!-- /Users/syfer/VsCode/EstebanLuiz/index.html -->
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Esteban Luiz - Photographe Professionnel</title>
+  <meta name="description" content="Esteban Luiz, photographe professionnel spécialisé en portrait, nature, architecture et événements. Capturant des moments inoubliables à travers l'objectif.">
+  <meta name="keywords" content="photographe, portrait, nature, architecture, photographie d'événements, Esteban Luiz">
+  <meta name="author" content="Esteban Luiz">
+  <link rel="icon" href="/public/assets/img/favicon.ico" type="image/x-icon">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-dFgV7kIjpsM6ms3iWpJ+jVxIvcvElFQoq/tTiIXIJ7KGhyy70uXgFJ+HuKa9cdPWnGhZUsWW5IhZ4lE0wM+/xg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="/public/assets/css/main.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Photographer",
+    "name": "Esteban Luiz",
+    "image": "/public/assets/img/img-11.jpg",
+    "url": "https://www.estebanluizphotographie.com",
+    "sameAs": [
+      "https://www.facebook.com/estebanluiz",
+      "https://www.instagram.com/estebanluiz",
+      "https://www.twitter.com/estebanluiz",
+      "https://www.linkedin.com/in/estebanluiz"
+    ],
+    "description": "Esteban Luiz, photographe professionnel spécialisé en portrait, nature, architecture et événements.",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "123 Rue de la Photographie",
+      "addressLocality": "Paris",
+      "postalCode": "75000",
+      "addressCountry": "FR"
+    },
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+33-1-23-45-67-89",
+      "contactType": "Service clientèle",
+      "areaServed": "FR"
+    }
+  }
+  </script>
+</head>
+<body>
+  <header class="header">
+    <div class="container">
+      <h1 class="logo"><a href="#home">ESTEBAN LUIZ</a></h1>
+      <nav class="nav" aria-label="Menu de navigation">
+        <ul>
+          <li><a href="#home">Accueil</a></li>
+          <li><a href="#portfolio">Portfolio</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#testimonials">Témoignages</a></li>
+          <li><a href="#blog">Blog</a></li>
+          <li><a href="#instagram">Instagram</a></li>
+          <li><a href="#about">À propos</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <button class="hamburger" aria-label="Ouvrir le menu" aria-controls="navigation" aria-expanded="false">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+  </header>
+
+  <section class="hero" id="home">
+    <div class="hero-overlay"></div>
+    <div class="hero-content" data-aos="fade-up">
+      <h2>Capturer des moments inoubliables</h2>
+      <p>Découvrez la beauté à travers mon objectif</p>
+      <a href="#portfolio" class="btn">Inspiration</a>
+    </div>
+  </section>
+
+  <section class="portfolio" id="portfolio">
+    <div class="container">
+      <h2 data-aos="fade-up">Mon Portfolio</h2>
+      <div class="filter" data-aos="fade-up" data-aos-delay="200">
+        <button class="filter-btn active" data-filter="all">Tous</button>
+        <button class="landscape-btn" data-filter="landscape">Paysage</button>
+        <button class="portrait-btn" data-filter="portrait">Portrait</button>
+        <button class="architecture-btn" data-filter="architecture">Architecture</button>
+        <button class="events-btn" data-filter="events">Événements</button>
+      </div>
+      <div class="swiper-container portfolio-swiper" data-aos="fade-up" data-aos-delay="400">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide gallery-item" data-category="landscape"><img src="/public/assets/img/img-0-min.jpg" alt="Paysage Nature" loading="lazy"></div>
+          <div class="swiper-slide gallery-item" data-category="portrait"><img src="/public/assets/img/img-1-min.jpg" alt="Portrait Artistique" loading="lazy"></div>
+          <div class="swiper-slide gallery-item" data-category="architecture"><img src="/public/assets/img/img-2-min.jpg" alt="Architecture Moderne" loading="lazy"></div>
+          <div class="swiper-slide gallery-item" data-category="events"><img src="/public/assets/img/img-3-min.jpg" alt="Événement Spécial" loading="lazy"></div>
+          <div class="swiper-slide gallery-item" data-category="landscape"><img src="/public/assets/img/img-4-min.jpg" alt="Paysage Nature 4" loading="lazy"></div>
+          <div class="swiper-slide gallery-item" data-category="portrait"><img src="/public/assets/img/img-5-min.jpg" alt="Portrait Artistique 5" loading="lazy"></div>
+          <div class="swiper-slide gallery-item" data-category="architecture"><img src="/public/assets/img/img-6-min.jpg" alt="Architecture Moderne 6" loading="lazy"></div>
+          <div class="swiper-slide gallery-item" data-category="events"><img src="/public/assets/img/img-7-min.jpg" alt="Événement Spécial 7" loading="lazy"></div>
+          <div class="swiper-slide gallery-item" data-category="landscape"><img src="/public/assets/img/img-8-min.jpg" alt="Paysage Nature 8" loading="lazy"></div>
+          <div class="swiper-slide gallery-item" data-category="portrait"><img src="/public/assets/img/img-9-min.jpg" alt="Portrait Artistique 9" loading="lazy"></div>
+          <div class="swiper-slide gallery-item" data-category="architecture"><img src="/public/assets/img/img-10-min.jpg" alt="Architecture Moderne 10" loading="lazy"></div>
+          <div class="swiper-slide gallery-item" data-category="events"><img src="/public/assets/img/img-11-min.jpg" alt="Événement Spécial 11" loading="lazy"></div>
+          <div class="swiper-slide gallery-item" data-category="landscape"><img src="/public/assets/img/img-12-min.jpg" alt="Paysage Nature 12" loading="lazy"></div>
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="services" id="services">
+    <div class="container">
+      <h2 data-aos="fade-up">Services</h2>
+      <div class="services-grid" data-aos="fade-up" data-aos-delay="200">
+        <div class="service-item" data-aos="zoom-in" data-aos-delay="100">
+          <i class="fas fa-camera"></i>
+          <h3>Photographie de Portrait</h3>
+          <p>Des portraits professionnels pour capturer votre essence.</p>
+        </div>
+        <div class="service-item" data-aos="zoom-in" data-aos-delay="200">
+          <i class="fas fa-tree"></i>
+          <h3>Photographie de Nature</h3>
+          <p>Immortalisez la beauté naturelle avec des clichés époustouflants.</p>
+        </div>
+        <div class="service-item" data-aos="zoom-in" data-aos-delay="300">
+          <i class="fas fa-city"></i>
+          <h3>Photographie d'Architecture</h3>
+          <p>Des images saisissantes de structures et de paysages urbains.</p>
+        </div>
+        <div class="service-item" data-aos="zoom-in" data-aos-delay="400">
+          <i class="fas fa-calendar-alt"></i>
+          <h3>Photographie d'Événements</h3>
+          <p>Capturez les moments précieux de vos événements spéciaux.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="testimonials" id="testimonials">
+    <div class="container">
+      <h2 data-aos="fade-up">Témoignages</h2>
+      <div class="swiper-container testimonials-swiper" data-aos="fade-up" data-aos-delay="200">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide testimonial-item">
+            <img src="/public/assets/img/testimonial1.jpg" alt="Marie & Pierre" loading="lazy">
+            <p>"Esteban a suisi capturer notre journée spéciale avec une telle grâce et professionnalisme.<br>
+              Les photos sont tout simplement magnifiques."</p>
+            <h4>Marie & Pierre</h4>
+          </div>
+          <div class="swiper-slide testimonial-item">
+            <img src="/public/assets/img/testimonial2.jpg" alt="Jean Dupont" loading="lazy">
+            <p>"Un talent exceptionnel pour la photographie de nature.<br>
+              Chaque image raconte une histoire."</p>
+            <h4>Jean Dupont</h4>
+          </div>
+          <div class="swiper-slide testimonial-item">
+            <img src="/public/assets/img/testimonial3.jpg" alt="Sophie Martin" loading="lazy">
+            <p>"Les photos d'architecture d'Esteban sont incroyablement détaillées et artistiques.<br>
+              Je recommande vivement ses services."</p>
+            <h4>Sophie Martin</h4>
+          </div>
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="blog" id="blog">
+    <div class="container">
+      <h2 data-aos="fade-up">Blog</h2>
+      <div class="blog-grid" data-aos="fade-up" data-aos-delay="200">
+        <article class="blog-post">
+          <img src="/public/assets/img/img-1-min.jpg" alt="Les Meilleures Techniques pour la Photographie de Portrait" loading="lazy">
+          <div class="blog-content">
+            <h3>Les Meilleures Techniques pour la Photographie de Portrait</h3>
+            <p>Découvrez les astuces professionnelles pour capturer des portraits saisissants. De l'éclairage à la composition, apprenez comment mettre en valeur vos sujets et créer des images mémorables.</p>
+            <a href="/templates/blog.html" class="btn">Lire la suite</a>
+          </div>
+        </article>
+        <article class="blog-post">
+          <img src="/public/assets/img/img-h2-min.jpg" alt="Explorer la Photographie de Nature : Conseils et Inspirations" loading="lazy">
+          <div class="blog-content">
+            <h3>Explorer la Photographie de Nature : Conseils et Inspirations</h3>
+            <p>Plongez dans le monde de la photographie de nature avec ces conseils essentiels. Apprenez à capturer la beauté sauvage et à immortaliser les paysages époustouflants.</p>
+            <a href="/templates/blog.html" class="btn">Lire la suite</a>
+          </div>
+        </article>
+        <article class="blog-post">
+          <img src="/public/assets/img/img-8-min.jpg" alt="Photographie d'Architecture : Capturer l'Essence des Structures" loading="lazy">
+          <div class="blog-content">
+            <h3>Photographie d'Architecture : Capturer l'Essence des Structures</h3>
+            <p>Apprenez comment mettre en valeur les lignes et les formes des bâtiments avec des techniques avancées de photographie d'architecture. Transformez vos clichés en œuvres d'art.</p>
+            <a href="/templates/blog.html" class="btn">Lire la suite</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="instagram-feed" id="instagram">
+    <div class="container">
+      <h2 data-aos="fade-up">Suivez-moi sur Instagram</h2>
+      <div class="instagram-grid" data-aos="fade-up" data-aos-delay="200">
+        <a href="https://instagram.com/esteban.lz" target="_blank" aria-label="Instagram Photo 1"><img src="/public/assets/img/img-7-min.jpg" alt="Instagram Photo 1" loading="lazy"></a>
+        <a href="https://instagram.com/esteban.lz" target="_blank" aria-label="Instagram Photo 2"><img src="/public/assets/img/img-8-min.jpg" alt="Instagram Photo 2" loading="lazy"></a>
+        <a href="https://instagram.com/esteban.lz" target="_blank" aria-label="Instagram Photo 3"><img src="/public/assets/img/img-9-min.jpg" alt="Instagram Photo 3" loading="lazy"></a>
+        <a href="https://instagram.com/esteban.lz" target="_blank" aria-label="Instagram Photo 4"><img src="/public/assets/img/img-10-min.jpg" alt="Instagram Photo 4" loading="lazy"></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="about" id="about">
+    <div class="container">
+      <h2 data-aos="fade-up">À propos de moi</h2>
+      <div class="about-content" data-aos="fade-up" data-aos-delay="200">
+        <img src="/public/assets/img/esteban-min.jpg" alt="Esteban Luiz" loading="lazy">
+        <div class="about-text">
+          <p>Je suis Esteban Luiz, un photographe passionné par la capture des moments authentiques et des paysages époustouflants. Mon objectif est de raconter des histoires à travers mes images. Avec plusieurs années d'expérience, je m'engage à fournir des photographies de haute qualité qui reflètent la beauté et l'émotion de chaque instant.</p>
+          <a href="#contact" class="btn">Réservez une séance</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <div class="container">
+      <h2 data-aos="fade-up">Contactez-moi</h2>
+      <form id="contact-form" data-aos="fade-up" data-aos-delay="200" aria-label="Formulaire de contact">
+        <div class="form-group">
+          <input type="text" id="name" name="name" placeholder="Votre nom" required aria-required="true">
+          <input type="email" id="email" name="email" placeholder="Votre email" required aria-required="true">
+        </div>
+        <textarea id="message" name="message" rows="5" placeholder="Votre message" required aria-required="true"></textarea>
+        <button type="submit" class="btn">Envoyer</button>
+      </form>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2024 Esteban Luiz. Tous droits réservés.</p>
+      <div class="social">
+        <a href="https://facebook.com/estebanluiz" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://instagram.com/estebanluiz" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="https://twitter.com/estebanluiz" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+        <a href="https://linkedin.com/in/estebanluiz" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <div class="modal" id="image-modal" aria-hidden="true" role="dialog">
+    <span class="close" aria-label="Fermer">&times;</span>
+    <img class="modal-content" id="modal-img" alt="">
+    <span class="prev" aria-label="Image précédente">&#10094;</span>
+    <span class="next" aria-label="Image suivante">&#10095;</span>
+  </div>
+
+  <button id="scrollToTopBtn" title="Retour en haut" aria-label="Retour en haut">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" integrity="sha512-2QbPPZFSbYt0r1Zc4zXEuCgkc3EB85V6e5TJOFLx3IABlN3H1mcaM7lPd6F4mrrDx8Swu9tvTjWj/tL+mVxNCw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="/public/assets/js/main.js"></script>
+</body>
+</html>
