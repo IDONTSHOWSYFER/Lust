@@ -410,6 +410,11 @@ body.light .footer .social a:hover {
     background: #fbff00;
 }
 
+body.light .architecture-btn {
+    background-color: #000000;
+    color: white;
+}
+
 .events-btn {
     background: #ff00d9;
     color: white;

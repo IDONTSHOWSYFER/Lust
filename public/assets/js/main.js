@@ -278,6 +278,20 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
 
+    document.getElementById('portfolio-link').addEventListener('click', function(event) {
+      // Empêcher le comportement par défaut du lien
+      event.preventDefault();
+  
+      // Défilement vers l'ancre #portfolio
+      const portfolioSection = document.getElementById('portfolio');
+      if (portfolioSection) {
+        portfolioSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+  
+      // Ouvrir l'URL externe dans un nouvel onglet
+      window.open('https://sthdpixs.myportfolio.com/work', '_blank');
+    });
+
     // Initialisation du thème en fonction des préférences de l'utilisateur
     if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
       // Default to dark mode
