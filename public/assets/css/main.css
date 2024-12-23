@@ -1,24 +1,22 @@
 /* public/assets/css/main.css */
 
-/* Variables de Couleurs */
 :root {
-    --primary-color: #ffffff; /* Texte en mode nuit */
-    --secondary-color: #000000; /* Fond en mode nuit */
+    --primary-color: #ffffff;
+    --secondary-color: #000000;
     --accent-color: #007aff;
-    --background-color: #f5f5f5; /* Fond en mode jour */
+    --background-color: #f5f5f5;
     --font-family: 'Roboto', sans-serif;
     --transition-speed: 0.3s;
     --max-width: 1200px;
 }
 
 body.light {
-    --primary-color: #000000; /* Texte en mode jour */
-    --secondary-color: #ffffff; /* Fond en mode jour */
+    --primary-color: #000000;
+    --secondary-color: #ffffff;
     --accent-color: #007aff;
-    --background-color: #ffffff; /* Fond en mode jour */
+    --background-color: #ffffff;
 }
 
-/* Reset de Base */
 html {
     box-sizing: border-box;
 }
@@ -35,7 +33,6 @@ body {
     overflow-x: hidden;
 }
 
-/* Images */
 img {
     max-width: 100%;
     height: auto;
@@ -43,7 +40,6 @@ img {
     transition: transform var(--transition-speed), opacity var(--transition-speed);
 }
 
-/* Container */
 .container {
     position: relative;
     width: 90%;
@@ -52,7 +48,6 @@ img {
     padding: 20px 0;
 }
 
-/* Header */
 .header {
     position: fixed;
     top: 0;
@@ -100,7 +95,6 @@ body.light .header {
     color: var(--accent-color);
 }
 
-/* Menu Hamburger avec 3 spans */
 .hamburger {
     display: none;
     background: none;
@@ -139,7 +133,6 @@ body.light .header {
     transform: translateY(-9px) rotate(-45deg);
 }
 
-/* Bouton de Bascule Thème */
 #theme-toggle {
     position: fixed;
     bottom: 40px;
@@ -190,38 +183,6 @@ body.light #theme-toggle i.fa-moon {
     transform: translateY(-5px);
 }
 
-/* Afficher le hamburger et le bouton de bascule sur tablettes/mobiles */
-@media (max-width: 992px) {
-    .hamburger {
-        display: flex;
-    }
-    .nav ul {
-        flex-direction: column;
-        position: absolute;
-        top: 60px;
-        right: 20px;
-        background: var(--secondary-color);
-        width: 200px;
-        display: none;
-        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-        padding: 20px;
-    }
-    .nav ul.active {
-        display: flex;
-    }
-    .nav ul li {
-        margin: 15px 0;
-    }
-}
-
-/* Afficher le bouton de bascule thème sur tous les écrans, positionné correctement */
-@media (min-width: 993px) {
-    #theme-toggle {
-        display: block;
-    }
-}
-
-/* Footer */
 .footer {
     padding: 30px 0;
     background: var(--secondary-color);
@@ -254,7 +215,6 @@ body.light .footer .social a:hover {
     color: var(--accent-color);
 }
 
-/* Hero Section */
 .hero {
     height: 100vh;
     background: url('../img/img-v0-min.jpg') center center/cover no-repeat;
@@ -312,7 +272,6 @@ body.light .footer .social a:hover {
     box-shadow: 0 8px 16px rgba(0,0,0,0.2);
 }
 
-/* Portfolio Section */
 .portfolio {
     background: var(--secondary-color);
 }
@@ -326,7 +285,7 @@ body.light .footer .social a:hover {
     content: '';
     width: 60px;
     height: 4px;
-    background-image: linear-gradient(90deg, red, orange, yellow, green, blue, indigo, violet); /* Dégradé multicolore */
+    background-image: linear-gradient(90deg, red, orange, yellow, green, blue, indigo, violet);
     background-size: 400% 400%;
     position: absolute;
     left: 50%;
@@ -335,7 +294,6 @@ body.light .footer .social a:hover {
     animation: rotateColors 5s linear infinite;
 }
 
-/* Animation de rotation des couleurs */
 @keyframes rotateColors {
     0% {
         background-position: 0% 50%;
@@ -367,7 +325,6 @@ body.light .footer .social a:hover {
     background: #005bb5;
 }
 
-/* Boutons custom (paysage, portrait, etc.) */
 .landscape-btn,
 .portrait-btn,
 .architecture-btn,
@@ -454,8 +411,6 @@ body.light .architecture-btn {
     filter: brightness(80%);
 }
 
-/* Services Section */
-
 .services {
     background-color: var(--secondary-color);
 }
@@ -469,7 +424,7 @@ body.light .architecture-btn {
     content: '';
     width: 60px;
     height: 4px;
-    background-image: linear-gradient(90deg, red, orange, yellow, green, blue, indigo, violet); /* Dégradé multicolore */
+    background-image: linear-gradient(90deg, red, orange, yellow, green, blue, indigo, violet);
     background-size: 400% 400%;
     position: absolute;
     left: 50%;
@@ -521,7 +476,6 @@ body.light .service-item {
     font-size: 1rem;
 }
 
-/* Testimonials Section */
 .testimonials {
     background: var(--secondary-color);
 }
@@ -535,7 +489,7 @@ body.light .service-item {
     content: '';
     width: 60px;
     height: 4px;
-    background-image: linear-gradient(90deg, red, orange, yellow, green, blue, indigo, violet); /* Dégradé multicolore */
+    background-image: linear-gradient(90deg, red, orange, yellow, green, blue, indigo, violet);
     background-size: 400% 400%;
     position: absolute;
     left: 50%;
@@ -577,7 +531,6 @@ body.light .service-item {
     color: var(--primary-color);
 }
 
-/* Blog Section */
 .blog {
     background: var(--secondary-color);
     padding: 100px 0;
@@ -623,7 +576,7 @@ body.light .blog-post {
 }
 
 body.light .hero-content h2 {
-    color: #ffffff; /* Blanc */
+    color: #ffffff;
 }
 
 .blog-post:hover {
@@ -659,8 +612,6 @@ body.light .hero-content h2 {
     background: #005bb5;
 }
 
-/* Instagram Feed Section */
-
 .instagram-feed {
     padding: 100px 0;
     background: var(--secondary-color);
@@ -692,7 +643,7 @@ body.light .hero-content h2 {
 }
 .instagram-grid a img {
     width: 100%;
-    height: 200px;
+    aspect-ratio: 1 / 1;
     object-fit: cover;
     border-radius: 10px;
     transition: transform var(--transition-speed);
@@ -701,7 +652,6 @@ body.light .hero-content h2 {
     transform: scale(1.05);
 }
 
-/* About Section */
 .about {
     padding: 100px 0;
     background: var(--secondary-color);
@@ -717,7 +667,7 @@ body.light .hero-content h2 {
     content: '';
     width: 60px;
     height: 4px;
-    background-image: linear-gradient(90deg, red, orange, yellow, green, blue, indigo, violet); /* Dégradé multicolore */
+    background-image: linear-gradient(90deg, red, orange, yellow, green, blue, indigo, violet);
     background-size: 400% 400%;
     position: absolute;
     left: 50%;
@@ -760,9 +710,7 @@ body.light .hero-content h2 {
     background: #005bb5;
 }
 
-/* Contact Section */
 .contact {
-    
     background: var(--secondary-color);
 }
 .contact h2 {
@@ -837,7 +785,6 @@ textarea:focus {
     box-shadow: 0 8px 16px rgba(0,0,0,0.2);
 }
 
-/* Modal Styles */
 .modal {
     display: none;
     position: fixed;
@@ -895,14 +842,13 @@ textarea:focus {
     color: var(--accent-color);
 }
 
-/* Scroll to Top Button */
 #scrollToTopBtn {
     display: none;
     position: fixed;
     bottom: 40px;
     right: 40px;
     z-index: 2100;
-    background-image: linear-gradient(90deg, red, orange, yellow, green, blue, indigo, violet); /* Dégradé multicolore */
+    background-image: linear-gradient(90deg, red, orange, yellow, green, blue, indigo, violet);
     background-size: 400% 400%;
     color: var(--secondary-color);
     border: none;
@@ -927,7 +873,6 @@ textarea:focus {
     font-size: 1.5rem;
 }
 
-/* Swiper Styles */
 .swiper-container {
     width: 100%;
     box-sizing: border-box;
@@ -951,7 +896,6 @@ textarea:focus {
     object-fit: cover;
 }
 
-/* Responsive Styles */
 @media (max-width: 992px) {
     .about-content {
         flex-direction: column;
@@ -1006,14 +950,14 @@ textarea:focus {
         flex: 1 1 100%;
     }
     .instagram-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
     }
     #theme-toggle {
-        display: block; /* Assurer qu'il est visible sur petits écrans */
+        display: block;
     }
 }
 
-/* Focus visible */
 a:focus,
 button:focus,
 input:focus,
@@ -1022,7 +966,6 @@ textarea:focus {
     outline-offset: 2px;
 }
 
-/* Animations */
 @keyframes fadeInUp {
     from { opacity: 0; transform: translateY(20px); }
     to { opacity: 1; transform: translateY(0); }
