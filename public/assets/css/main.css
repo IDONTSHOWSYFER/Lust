@@ -373,7 +373,7 @@ body.light .footer .social a:hover {
 .architecture-btn,
 .events-btn {
     padding: 10px 20px;
-    margin: 0 10px;
+    margin: 0 20px;
     border: none;
     cursor: pointer;
     border-radius: 20px;
@@ -546,7 +546,7 @@ body.light .service-item {
 }
 .swiper-slide.testimonial-item {
     background: var(--secondary-color);
-    padding: 20px;
+    padding: 0px;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
     transition: transform var(--transition-speed);
