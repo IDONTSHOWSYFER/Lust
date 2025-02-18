@@ -1,12 +1,8 @@
-/* public/assets/js/main.js */
-
 document.addEventListener('DOMContentLoaded', () => {
-  // Initialisation AOS
   if (typeof AOS !== 'undefined') {
     AOS.init({ duration: 800, easing: 'ease-in-out', once: true, mirror: false });
   }
 
-  // Initialisation Swiper pour Portfolio
   let portfolioSwiper;
   if (typeof Swiper !== 'undefined') {
     portfolioSwiper = new Swiper('.portfolio-swiper', {
@@ -26,7 +22,6 @@ document.addEventListener('DOMContentLoaded', () => {
       },
     });
 
-    // Initialisation Swiper pour Témoignages
     const testimonialsSwiper = new Swiper('.testimonials-swiper', {
       slidesPerView: 1,
       spaceBetween: 20,
@@ -40,13 +35,10 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Gestion du Formulaire de Contact avec EmailJS
   const form = document.getElementById('contact-form');
   if (form) {
     form.addEventListener('submit', (e) => {
       e.preventDefault();
-
-      // Vérification des champs
       const name = document.getElementById('name').value.trim();
       const email = document.getElementById('email').value.trim();
       const message = document.getElementById('message').value.trim();
@@ -56,20 +48,16 @@ document.addEventListener('DOMContentLoaded', () => {
         return;
       }
 
-      // Envoi du formulaire via EmailJS
       emailjs.sendForm('service_v60hg29', 'template_ekdr0iw', form)
-        .then((response) => {
-          console.log('SUCCESS!', response.status, response.text);
+        .then(() => {
           alert('Merci pour votre message ! Je vous recontacterai bientôt.');
           form.reset();
-        }, (error) => {
-          console.error('FAILED...', error);
+        }, () => {
           alert('Erreur lors de l\'envoi du message. Veuillez réessayer.');
         });
     });
   }
 
-  // Gestion du Menu Hamburger
   const hamburger = document.querySelector('.hamburger');
   const navUl = document.querySelector('.nav ul');
   if (hamburger && navUl) {
@@ -80,9 +68,18 @@ document.addEventListener('DOMContentLoaded', () => {
       hamburger.setAttribute('aria-expanded', expanded);
       hamburger.setAttribute('aria-label', expanded ? 'Fermer le menu' : 'Ouvrir le menu');
     });
+
+    document.addEventListener('click', (event) => {
+      const isClickInsideBurger = hamburger.contains(event.target);
+      const isClickInsideNav = navUl.contains(event.target);
+      if (navUl.classList.contains('active') && !isClickInsideBurger && !isClickInsideNav) {
+        navUl.classList.remove('active');
+        hamburger.classList.remove('active');
+        hamburger.setAttribute('aria-expanded', 'false');
+      }
+    });
   }
 
-  // Navigation avec Smooth Scroll
   const links = document.querySelectorAll('a[href^="#"]');
   links.forEach(link => {
     link.addEventListener('click', (e) => {
@@ -92,6 +89,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const headerOffset = document.querySelector('.header').offsetHeight;
         const offsetPosition = target.getBoundingClientRect().top + window.pageYOffset - headerOffset - 20;
         window.scrollTo({ top: offsetPosition, behavior: 'smooth' });
+
         if (navUl.classList.contains('active')) {
           navUl.classList.remove('active');
           hamburger.classList.remove('active');
@@ -101,7 +99,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // Effet de Scroll sur le Header et Bouton Retour en Haut
   const header = document.querySelector('.header');
   const scrollToTopBtn = document.getElementById('scrollToTopBtn');
   window.addEventListener('scroll', () => {
@@ -131,7 +128,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Filtrage du Portfolio avec Animations GSAP
   const filterButtons = document.querySelectorAll('.filter-btn, .landscape-btn, .portrait-btn, .architecture-btn, .events-btn');
   const galleryItems = document.querySelectorAll('.gallery-item');
   filterButtons.forEach(button => {
@@ -142,6 +138,7 @@ document.addEventListener('DOMContentLoaded', () => {
       if (portfolioSwiper) {
         portfolioSwiper.slideToLoop(0);
       }
+
       galleryItems.forEach(item => {
         if (filter === 'all' || item.getAttribute('data-category') === filter) {
           item.style.display = 'block';
@@ -161,7 +158,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // Galerie d'Images avec Modal et Animations GSAP
   const modal = document.getElementById('image-modal');
   const modalImg = document.getElementById('modal-img');
   const captionText = document.getElementById('caption');
@@ -183,10 +179,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
   function closeModalFunction() {
     if (typeof gsap !== 'undefined') {
-      gsap.to(modalImg, { opacity: 0, scale: 0.8, duration: 0.5, onComplete: () => {
-        modal.style.display = 'none';
-        modal.setAttribute('aria-hidden', 'true');
-      }});
+      gsap.to(modalImg, {
+        opacity: 0,
+        scale: 0.8,
+        duration: 0.5,
+        onComplete: () => {
+          modal.style.display = 'none';
+          modal.setAttribute('aria-hidden', 'true');
+        }
+      });
     } else {
       modal.style.display = 'none';
       modal.setAttribute('aria-hidden', 'true');
@@ -246,14 +247,12 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  // Animations GSAP pour la section Hero
   if (typeof gsap !== 'undefined') {
     gsap.from('.hero-content h2', { duration: 1, y: -50, opacity: 0, ease: "power2.out" });
     gsap.from('.hero-content p', { duration: 1, y: 50, opacity: 0, delay: 0.5, ease: "power2.out" });
     gsap.from('.hero-content .btn', { duration: 1, scale: 0.8, opacity: 0, delay: 1, ease: "power2.out" });
   }
 
-  /* Theme Toggle */
   const themeToggle = document.getElementById('theme-toggle');
   if (themeToggle) {
     themeToggle.addEventListener('click', () => {
@@ -264,14 +263,12 @@ document.addEventListener('DOMContentLoaded', () => {
       if (document.body.classList.contains('light')) {
         sunIcon.style.display = 'none';
         moonIcon.style.display = 'block';
-        // Animation avec GSAP (facultatif)
         if (typeof gsap !== 'undefined') {
           gsap.to('.header', { backgroundColor: 'rgba(255, 255, 255, 0.95)', duration: 0.5 });
         }
       } else {
         sunIcon.style.display = 'block';
         moonIcon.style.display = 'none';
-        // Animation avec GSAP (facultatif)
         if (typeof gsap !== 'undefined') {
           gsap.to('.header', { backgroundColor: 'rgba(0, 0, 0, 0.95)', duration: 0.5 });
         }
@@ -279,22 +276,15 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     document.getElementById('portfolio-link').addEventListener('click', function(event) {
-      // Empêcher le comportement par défaut du lien
       event.preventDefault();
-  
-      // Défilement vers l'ancre #portfolio
       const portfolioSection = document.getElementById('portfolio');
       if (portfolioSection) {
         portfolioSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
       }
-  
-      // Ouvrir l'URL externe dans un nouvel onglet
       window.open('https://sthdpixs.myportfolio.com/work', '_blank');
     });
 
-    // Initialisation du thème en fonction des préférences de l'utilisateur
     if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-      // Default to dark mode
       document.body.classList.remove('light');
       themeToggle.classList.remove('active');
       const sunIcon = themeToggle.querySelector('.fa-sun');
@@ -305,7 +295,6 @@ document.addEventListener('DOMContentLoaded', () => {
         gsap.to('.header', { backgroundColor: 'rgba(0, 0, 0, 0.95)', duration: 0.5 });
       }
     } else {
-      // Default to light mode
       document.body.classList.add('light');
       themeToggle.classList.add('active');
       const sunIcon = themeToggle.querySelector('.fa-sun');
