@@ -275,15 +275,6 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
 
-    document.getElementById('portfolio-link').addEventListener('click', function(event) {
-      event.preventDefault();
-      const portfolioSection = document.getElementById('portfolio');
-      if (portfolioSection) {
-        portfolioSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      }
-      window.open('https://sthdpixs.myportfolio.com/work', '_blank');
-    });
-
     if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
       document.body.classList.remove('light');
       themeToggle.classList.remove('active');
