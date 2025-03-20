@@ -1,6 +1,3 @@
-/* 
-   Variables : vous pouvez ajuster les couleurs, polices et tailles globales ici 
-*/
 :root {
     --primary-color: #ffffff;
     --secondary-color: #000000;
@@ -12,7 +9,7 @@
   }
   
   /* 
-     Thème clair : si le body a la classe .light, on redéfinit les couleurs 
+     Thème clair : si le body a la classe .light
   */
   body.light {
     --primary-color: #000000;
@@ -117,7 +114,7 @@
      Bouton burger 
   */
   .hamburger {
-    display: none; /* Par défaut masqué sur grands écrans */
+    display: none;
     background: none;
     border: none;
     cursor: pointer;
@@ -1038,8 +1035,7 @@
   */
   
   /* 
-     Pour les écrans plus grands que 992px (ou 768px), 
-     vous pouvez ajuster si besoin 
+     Pour les écrans plus grands que 992px
   */
   @media (max-width: 992px) {
     .about-content {
@@ -1074,7 +1070,7 @@
       height: auto;
     }
     .hamburger {
-      display: flex; /* On l’affiche sur les écrans plus petits */
+      display: flex;
     }
   }
   
@@ -1087,12 +1083,10 @@
       display: none;
     }
     
-    /* Ajuster la taille du logo pour qu'il prenne moins de place */
     .logo a {
       font-size: 1.5rem; 
     }
     
-    /* Rendre le bouton burger plus grand et plus visible */
     .hamburger {
       width: 35px; 
       height: 28px;
@@ -1105,7 +1099,6 @@
       margin: 4px 0;
     }
     
-    /* S'assurer que le nom du site et le burger ne se chevauchent pas */
     .container {
       padding: 10px 0;
     }
@@ -1135,12 +1128,10 @@
       display: block;
     }
     
-    /* Réduction supplémentaire du logo si nécessaire */
     .logo a {
       font-size: 1.3rem;
     }
     
-    /* Ajuster la position du burger si besoin */
     .hamburger {
       right: 10px;
       top: 50%;
