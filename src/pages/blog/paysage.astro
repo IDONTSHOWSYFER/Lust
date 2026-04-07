@@ -1,0 +1,144 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import '../../styles/global.css';
+
+const sections = [
+  {
+    title: 'Choisir le bon moment',
+    text: 'Les "heures dorées" — tôt le matin et en fin d\'après-midi — offrent une lumière chaude et rasante qui sublime les paysages. Les ombres longues créent de la profondeur et du relief, tandis que les couleurs du ciel ajoutent une dimension dramatique à vos images. L\'heure bleue, juste avant le lever ou après le coucher du soleil, offre également des ambiances uniques et mystérieuses.',
+    image: '/assets/img/img-h2-min.jpg',
+  },
+  {
+    title: 'Utiliser un trépied',
+    text: 'Le trépied est l\'outil indispensable du photographe de paysage. Il garantit une netteté parfaite, permet de travailler à basse sensibilité ISO pour une qualité d\'image optimale, et rend possibles les poses longues. C\'est également essentiel pour la photographie HDR, les panoramiques et le bracketing d\'exposition.',
+    image: '/assets/img/tripod-min.jpg',
+  },
+  {
+    title: 'Composition et règle des tiers',
+    text: 'Divisez mentalement votre image en neuf sections égales et placez les éléments clés le long de ces lignes ou à leurs intersections. Intégrez des lignes directrices naturelles (chemins, rivières, clôtures) qui guident le regard vers le point focal. La règle des tiers n\'est qu\'un guide — n\'hésitez pas à la briser consciemment pour des compositions plus audacieuses.',
+    image: '/assets/img/rules-min.jpg',
+  },
+  {
+    title: 'Intégrer le premier plan',
+    text: 'Un premier plan intéressant transforme une photo de paysage ordinaire en une image immersive. Rochers, fleurs, feuilles, reflets dans l\'eau — ces éléments créent une sensation de profondeur et invitent le spectateur à entrer dans la scène. Utilisez une petite ouverture (f/11-f/16) pour maintenir la netteté de l\'avant-plan jusqu\'à l\'horizon.',
+    image: '/assets/img/foreground-min.jpg',
+  },
+  {
+    title: 'Maîtriser l\'exposition',
+    text: 'Les paysages présentent souvent un contraste élevé entre ciel et sol. Apprenez à lire l\'histogramme et à utiliser la compensation d\'exposition. Les filtres gradués neutres permettent d\'équilibrer la luminosité du ciel et du paysage. Le bracketing d\'exposition avec fusion HDR est une alternative numérique pour capturer toute la gamme dynamique de la scène.',
+    image: '/assets/img/exposure-min.jpg',
+  },
+  {
+    title: 'Utiliser des filtres',
+    text: 'Les filtres ND (densité neutre) permettent des poses longues même en plein jour, transformant l\'eau en surfaces soyeuses et les nuages en traînées dynamiques. Le filtre polarisant réduit les reflets, sature les couleurs et assombrit les ciels bleus. Ces outils optiques créent des effets impossibles à reproduire parfaitement en post-production.',
+    image: '/assets/img/filters-min.jpg',
+  },
+  {
+    title: 'Post-production et retouche',
+    text: 'Le développement RAW est essentiel pour exploiter tout le potentiel de vos images. Ajustez l\'exposition, la balance des blancs, le contraste et la clarté pour révéler les détails. La retouche sélective permet de guider le regard du spectateur. Restez fidèle à l\'ambiance de la scène — une retouche subtile et cohérente est plus impactante qu\'un traitement excessif.',
+    image: '/assets/img/photoshop-min.jpg',
+  },
+  {
+    title: 'Explorer de nouveaux lieux',
+    text: 'La photographie de paysage est une invitation au voyage et à la découverte. Parcs nationaux, plages sauvages, montagnes, forêts anciennes — chaque lieu offre des opportunités uniques. Recherchez vos destinations à l\'avance, planifiez en fonction de la météo et de la lumière, mais restez ouvert aux surprises. Les meilleurs paysages se trouvent souvent hors des sentiers battus.',
+    image: '/assets/img/img-h0-min.jpg',
+  },
+];
+---
+
+<Layout
+  title="Photographie de paysage : conseils et inspirations | Blog Esteban Luiz"
+  description="Maîtrisez l'art de la photographie de paysage avec nos conseils sur la lumière, la composition, les filtres et le post-traitement."
+  type="article"
+  image="/assets/img/img-h3-min.jpg"
+>
+  <Header />
+  <main>
+    <!-- Hero -->
+    <section class="relative h-[60vh] md:h-[70vh] flex items-end overflow-hidden">
+      <img src="/assets/img/img-h3-min.jpg" alt="Photographie de paysage" class="absolute inset-0 w-full h-full object-cover" loading="eager" />
+      <div class="absolute inset-0 bg-gradient-to-t from-dark via-dark/50 to-transparent"></div>
+      <div class="relative z-10 max-w-4xl mx-auto px-6 pb-16">
+        <span class="text-accent text-xs uppercase tracking-[0.2em]">Paysage</span>
+        <h1 class="font-heading text-3xl md:text-5xl text-white font-medium mt-3 leading-tight" style="font-family: var(--font-heading);">
+          Explorer la photographie de paysage : conseils et inspirations
+        </h1>
+        <div class="flex items-center gap-4 mt-6 text-white/60 text-sm">
+          <img src="/assets/img/esteban-min.jpg" alt="Esteban Luiz" class="w-8 h-8 rounded-full object-cover" />
+          <span>Esteban Luiz</span>
+          <span>&bull;</span>
+          <span>22 Février 2025</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Content -->
+    <article class="max-w-4xl mx-auto px-6 py-16 md:py-24">
+      <p class="text-theme-muted text-lg leading-relaxed mb-16 reveal">
+        La photographie de paysage est une quête de lumière, de patience et d'émerveillement. Voici les techniques et inspirations pour capturer la beauté du monde naturel.
+      </p>
+
+      {sections.map((section, i) => (
+        <section class="mb-16 reveal">
+          <div class:list={['grid md:grid-cols-2 gap-8 items-center', i % 2 === 1 && 'md:[direction:rtl] md:[&>*]:[direction:ltr]']}>
+            <div>
+              <h2 class="font-heading text-2xl text-theme font-medium mb-4" style="font-family: var(--font-heading);">
+                {i + 1}. {section.title}
+              </h2>
+              <p class="text-theme-muted leading-relaxed">{section.text}</p>
+            </div>
+            <div class="aspect-[4/3] overflow-hidden">
+              <img src={section.image} alt={section.title} class="w-full h-full object-cover" loading="lazy" decoding="async" />
+            </div>
+          </div>
+        </section>
+      ))}
+
+      <!-- Inspirations -->
+      <section class="mb-16 reveal">
+        <h2 class="font-heading text-2xl text-theme font-medium mb-6" style="font-family: var(--font-heading);">
+          Photographes inspirants
+        </h2>
+        <div class="grid md:grid-cols-3 gap-6">
+          <div class="card-dark p-6 rounded-sm">
+            <h3 class="text-theme font-medium mb-2">Ansel Adams</h3>
+            <p class="text-theme-muted text-sm leading-relaxed">Maître du noir et blanc et de la zone system, ses paysages de l'Ouest américain restent des références intemporelles.</p>
+          </div>
+          <div class="card-dark p-6 rounded-sm">
+            <h3 class="text-theme font-medium mb-2">Galen Rowell</h3>
+            <p class="text-theme-muted text-sm leading-relaxed">Pionnier de la photographie d'aventure en extérieur, célèbre pour sa maîtrise de la lumière naturelle.</p>
+          </div>
+          <div class="card-dark p-6 rounded-sm">
+            <h3 class="text-theme font-medium mb-2">Sebastião Salgado</h3>
+            <p class="text-theme-muted text-sm leading-relaxed">Photographe documentaire brésilien dont les paysages épiques en noir et blanc témoignent de la beauté de la planète.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Back link -->
+      <div class="pt-8 border-t border-theme">
+        <a href="/#blog" class="inline-flex items-center gap-2 text-accent text-sm hover:gap-3 transition-all">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18" />
+          </svg>
+          Retour au blog
+        </a>
+      </div>
+    </article>
+  </main>
+  <Footer />
+
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "Explorer la photographie de paysage : conseils et inspirations",
+    "description": "Maîtrisez l'art de la photographie de paysage avec nos conseils sur la lumière, la composition et le matériel.",
+    "image": "https://estebanluiz.fr/assets/img/img-h3-min.jpg",
+    "author": { "@type": "Person", "name": "Esteban Luiz" },
+    "publisher": { "@type": "Organization", "name": "Esteban Luiz Photographie" },
+    "datePublished": "2025-02-22",
+    "dateModified": "2025-02-22"
+  })} />
+</Layout>

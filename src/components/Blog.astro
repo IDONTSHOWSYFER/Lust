@@ -1,0 +1,73 @@
+---
+const posts = [
+  {
+    title: 'Les meilleures techniques pour la photographie de portrait',
+    excerpt: 'Découvrez les secrets pour capturer des portraits authentiques et expressifs, de l\'éclairage à la composition.',
+    image: '/assets/img/img-1-min.jpg',
+    category: 'Portrait',
+    href: '/blog/portrait',
+    date: '15 Jan 2025',
+  },
+  {
+    title: 'Explorer la photographie de paysage : conseils et inspirations',
+    excerpt: 'Maîtrisez l\'art de la photographie de paysage avec nos conseils sur la lumière, la composition et le matériel.',
+    image: '/assets/img/img-h3-min.jpg',
+    category: 'Paysage',
+    href: '/blog/paysage',
+    date: '22 Fév 2025',
+  },
+  {
+    title: 'Photographie d\'architecture : capturer l\'essence des structures',
+    excerpt: 'Apprenez à sublimer les bâtiments et structures à travers des perspectives uniques et un jeu de lumières.',
+    image: '/assets/img/img-0-min.jpg',
+    category: 'Architecture',
+    href: '/blog/architecture',
+    date: '10 Mar 2025',
+  },
+];
+---
+
+<section id="blog" class="py-24 md:py-32">
+  <div class="max-w-7xl mx-auto px-6">
+    <!-- Header -->
+    <div class="text-center mb-16 reveal">
+      <p class="text-accent text-sm uppercase tracking-[0.2em] mb-4">Blog</p>
+      <h2 class="font-heading text-4xl md:text-5xl text-theme font-medium" style="font-family: var(--font-heading);">
+        Articles récents
+      </h2>
+    </div>
+
+    <!-- Posts Grid -->
+    <div class="grid md:grid-cols-3 gap-8 stagger-children">
+      {posts.map(post => (
+        <a href={post.href} class="group card-dark rounded-sm overflow-hidden">
+          <div class="aspect-[16/10] overflow-hidden">
+            <img
+              src={post.image}
+              alt={post.title}
+              class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+          <div class="p-6">
+            <div class="flex items-center gap-3 mb-4">
+              <span class="text-accent text-xs uppercase tracking-wider">{post.category}</span>
+              <span class="text-theme-subtle text-xs">{post.date}</span>
+            </div>
+            <h3 class="text-theme text-lg font-medium mb-3 group-hover:text-accent transition-colors duration-300 leading-snug" style="font-family: var(--font-heading);">
+              {post.title}
+            </h3>
+            <p class="text-theme-muted text-sm leading-relaxed">{post.excerpt}</p>
+            <div class="mt-4 flex items-center gap-2 text-accent text-sm">
+              Lire l'article
+              <svg class="w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+              </svg>
+            </div>
+          </div>
+        </a>
+      ))}
+    </div>
+  </div>
+</section>
