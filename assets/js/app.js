@@ -56,7 +56,8 @@
         if (entry.isIntersecting) {
           if (entry.target.classList.contains('img-reveal')) {
             entry.target.classList.add('img-reveal--visible');
-          } else {
+          }
+          if (entry.target.classList.contains('reveal')) {
             entry.target.classList.add('reveal--visible');
           }
           io.unobserve(entry.target);
