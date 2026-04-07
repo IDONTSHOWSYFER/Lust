@@ -1,277 +1,332 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr" dir="ltr">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Esteban Luiz - Photographe Professionnel</title>
-  <meta name="description" content="Esteban Luiz, photographe professionnel spécialisé en portrait, nature, architecture et événements. 
-  Capturant des moments inoubliables à travers l'objectif.">
-  <meta name="keywords" content="photographe, portrait, nature, architecture, photographie d'événements, Esteban Luiz">
-  <meta name="author" content="Esteban Luiz">
-  <link rel="icon" href="/public/assets/img/favicon.ico" type="image/x-icon">
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" rel="stylesheet"/>
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
-  <link rel="stylesheet" href="/public/assets/css/main.css">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
-  <script>
-    (function(){
-      emailjs.init("cgjiLXg6Si4G14GEb");
-    })();
-  </script>
+  <title>Esteban Luiz — Photographe professionnel à Paris | Portrait, Paysage, Architecture</title>
+  <meta name="description" content="Esteban Luiz, photographe professionnel à Paris. Portrait, paysage, architecture et événements. Des images qui racontent, une vision qui marque.">
+  <link rel="canonical" href="https://estebanluiz.fr/">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Esteban Luiz — Photographe professionnel à Paris">
+  <meta property="og:description" content="Portrait, paysage, architecture et événements. Des images qui racontent, une vision qui marque.">
+  <meta property="og:image" content="https://estebanluiz.fr/assets/img/img-v0-min.jpg">
+  <meta property="og:url" content="https://estebanluiz.fr/">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="fr_FR">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@estebanluiz_">
+  <meta name="twitter:title" content="Esteban Luiz — Photographe professionnel à Paris">
+  <meta name="twitter:description" content="Portrait, paysage, architecture et événements. Des images qui racontent.">
+  <meta name="twitter:image" content="https://estebanluiz.fr/assets/img/img-v0-min.jpg">
+
+  <!-- Preload critical assets -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" href="assets/img/img-v0-min.jpg" as="image" fetchpriority="high">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+
+  <!-- Schema.org -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "Photographer",
-    "name": "Esteban Luiz",
-    "image": "/public/assets/img/img-11.jpg",
-    "url": "https://www.estebanluizphotographie.com",
-    "sameAs": [
-      "https://www.facebook.com/estebanluiz",
-      "https://www.instagram.com/estebanluiz",
-      "https://www.twitter.com/estebanluiz",
-      "https://www.linkedin.com/in/estebanluiz"
-    ],
-    "description": "Esteban Luiz, photographe professionnel spécialisé en portrait, nature, architecture et événements.",
+    "@type": "ProfessionalService",
+    "name": "Esteban Luiz Photographie",
+    "image": "https://estebanluiz.fr/assets/img/esteban-min.jpg",
+    "url": "https://estebanluiz.fr",
+    "@id": "https://estebanluiz.fr/#business",
+    "telephone": "",
     "address": {
       "@type": "PostalAddress",
-      "streetAddress": "123 Rue de la Photographie",
       "addressLocality": "Paris",
-      "postalCode": "75000",
       "addressCountry": "FR"
     },
-    "contactPoint": {
-      "@type": "ContactPoint",
-      "telephone": "+33-1-23-45-67-89",
-      "contactType": "Service clientèle",
-      "areaServed": "FR"
+    "sameAs": [
+      "https://instagram.com/estebanluizantonio",
+      "https://twitter.com/estebanluiz_",
+      "https://linkedin.com/in/esteban-luiz"
+    ],
+    "priceRange": "$$",
+    "description": "Photographe professionnel à Paris, spécialisé en portrait, paysage, architecture et événements.",
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Services photographiques",
+      "itemListElement": [
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Photographie de portrait"}},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Photographie de paysage"}},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Photographie d'architecture"}},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Photographie d'événements et mariage"}}
+      ]
     }
   }
   </script>
 </head>
 <body>
-  <header class="header">
-    <div class="container">
-      <h1 class="logo"><a href="#home">ESTEBAN LUIZ</a></h1>
-      <nav class="nav" aria-label="Menu de navigation">
-        <ul>
-          <li><a href="#home">Accueil</a></li>
-          <li><a href="https://estebanluizantonio.myportfolio.com/work" id="portfolio-link">Portfolio</a></li>
-          <li><a href="#services">Services</a></li>
-          <li><a href="#testimonials">Témoignages</a></li>
-          <li><a href="#blog">Blog</a></li>
-          <li><a href="#instagram">Instagram</a></li>
-          <li><a href="#about">À propos</a></li>
-          <li><a href="#contact">Contact</a></li>
+
+  <!-- Header -->
+  <header class="header" id="header" role="banner">
+    <div class="header__inner">
+      <a href="/" class="logo" aria-label="Esteban Luiz — Accueil">EL</a>
+      <nav class="nav" aria-label="Navigation principale">
+        <ul class="nav__list">
+          <li><a href="portfolio.html" class="nav__link">Portfolio</a></li>
+          <li><a href="a-propos.html" class="nav__link">À propos</a></li>
+          <li><a href="contact.html" class="nav__cta">Contact</a></li>
         </ul>
       </nav>
-      <button class="hamburger" aria-label="Ouvrir le menu" aria-controls="navigation" aria-expanded="false">
-        <span class="bar"></span>
-        <span class="bar"></span>
-        <span class="bar"></span>
+      <button class="hamburger" id="hamburger" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="mobile-nav">
+        <span class="hamburger__line"></span>
+        <span class="hamburger__line"></span>
       </button>
     </div>
   </header>
-  <section class="hero" id="home">
-    <div class="hero-overlay"></div>
-    <div class="hero-content" data-aos="fade-up">
-      <h2>Capturer des moments inoubliables</h2>
-      <p>Découvrez la beauté à travers mon objectif</p>
-      <a href="#portfolio" class="btn">Inspiration</a>
+
+  <!-- Mobile Nav -->
+  <div class="nav-mobile" id="mobile-nav" role="dialog" aria-label="Menu de navigation" aria-hidden="true">
+    <nav>
+      <ul class="nav-mobile__list">
+        <li><a href="/" class="nav-mobile__link">Accueil</a></li>
+        <li><a href="portfolio.html" class="nav-mobile__link">Portfolio</a></li>
+        <li><a href="a-propos.html" class="nav-mobile__link">À propos</a></li>
+        <li><a href="contact.html" class="nav-mobile__link">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="nav-mobile__footer">
+      <a href="https://instagram.com/estebanluizantonio" target="_blank" rel="noopener noreferrer">Instagram</a>
+      <a href="https://twitter.com/estebanluiz_" target="_blank" rel="noopener noreferrer">Twitter</a>
+      <a href="https://linkedin.com/in/esteban-luiz" target="_blank" rel="noopener noreferrer">LinkedIn</a>
     </div>
-  </section>
-  <section class="portfolio" id="portfolio">
-    <div class="container">
-      <h2 data-aos="fade-up">Mon Portfolio</h2>
-      <div class="filter" data-aos="fade-up" data-aos-delay="200">
-        <button class="filter-btn active" data-filter="all">Tous</button>
-        <button class="landscape-btn" data-filter="landscape">Paysage</button>
-        <button class="portrait-btn" data-filter="portrait">Portrait</button>
-        <button class="architecture-btn" data-filter="architecture">Architecture</button>
-        <button class="events-btn" data-filter="events">Événements</button>
+  </div>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero" id="hero" aria-label="Présentation">
+      <div class="hero__bg">
+        <img
+          class="hero__img"
+          src="assets/img/img-v0-min.jpg"
+          alt="Photographie de paysage par Esteban Luiz — lumière naturelle sur un panorama"
+          width="1920"
+          height="2880"
+          fetchpriority="high"
+          decoding="sync"
+        >
       </div>
-      <div class="swiper-container portfolio-swiper" data-aos="fade-up" data-aos-delay="400">
-        <div class="swiper-wrapper">
-          <div class="swiper-slide gallery-item" data-category="landscape"><img src="/public/assets/img/img-3-min.jpg" alt="Paysage" loading="lazy"></div>
-          <div class="swiper-slide gallery-item" data-category="portrait"><img src="/public/assets/img/img-1-min.jpg" alt="Portrait Artistique" loading="lazy"></div>
-          <div class="swiper-slide gallery-item" data-category="architecture"><img src="/public/assets/img/img-8-min.jpg" alt="Architecture Moderne" loading="lazy"></div>
-          <div class="swiper-slide gallery-item" data-category="events"><img src="/public/assets/img/img-4-min.jpg" alt="Événement Spécial" loading="lazy"></div>
-          <div class="swiper-slide gallery-item" data-category="landscape"><img src="/public/assets/img/img-0-min.jpg" alt="Paysage 4" loading="lazy"></div>
-          <div class="swiper-slide gallery-item" data-category="architecture"><img src="/public/assets/img/img-11-min.jpg" alt="Architecture Moderne 6" loading="lazy"></div>
-          <div class="swiper-slide gallery-item" data-category="events"><img src="/public/assets/img/img-2-min.jpg" alt="Événement Spécial 7" loading="lazy"></div>
-          <div class="swiper-slide gallery-item" data-category="landscape"><img src="/public/assets/img/img-7-min.jpg" alt="Paysage 8" loading="lazy"></div>
-          <div class="swiper-slide gallery-item" data-category="portrait"><img src="/public/assets/img/img-9-min.jpg" alt="Portrait Artistique 9" loading="lazy"></div>
-          <div class="swiper-slide gallery-item" data-category="architecture"><img src="/public/assets/img/img-10-min.jpg" alt="Architecture Moderne 10" loading="lazy"></div>
-          <div class="swiper-slide gallery-item" data-category="events"><img src="/public/assets/img/img-6-min.jpg" alt="Événement Spécial 11" loading="lazy"></div>
-          <div class="swiper-slide gallery-item" data-category="landscape"><img src="/public/assets/img/img-12-min.jpg" alt="Paysage 12" loading="lazy"></div>
-        </div>
-        <div class="swiper-button-next"></div>
-        <div class="swiper-button-prev"></div>
-        <div class="swiper-pagination"></div>
-      </div>
-    </div>
-  </section>
-  <section class="services" id="services">
-    <div class="container">
-      <h2 data-aos="fade-up">Services</h2>
-      <div class="services-grid" data-aos="fade-up" data-aos-delay="200">
-        <a href="https://estebanluizantonio.myportfolio.com/portrait" class="service-item" data-aos="zoom-in" data-aos-delay="100">
-          <i class="fas fa-camera"></i>
-          <h3>Photographie de Portraits</h3>
-          <p>Des portraits professionnels pour capturer votre essence.</p>
-        </a>
-        <a href="https://estebanluizantonio.myportfolio.com/voyage" class="service-item" data-aos="zoom-in" data-aos-delay="200">
-          <i class="fas fa-tree"></i>
-          <h3>Photographie de Paysage</h3>
-          <p>Immortalisez la beauté naturelle avec des clichés époustouflants.</p>
-        </a>
-        <a href="https://estebanluizantonio.myportfolio.com/architecture" class="service-item" data-aos="zoom-in" data-aos-delay="300">
-          <i class="fas fa-city"></i>
-          <h3>Photographie d'Architectures</h3>
-          <p>Des images saisissantes de structures et de paysages urbains.</p>
-        </a>
-        <a href="https://estebanluizantonio.myportfolio.com/mariage" class="service-item" data-aos="zoom-in" data-aos-delay="400">
-          <i class="fas fa-calendar-alt"></i>
-          <h3>Photographie d'Événements</h3>
-          <p>Capturez les moments précieux de vos événements spéciaux.</p>
+      <div class="hero__content">
+        <p class="t-label t-label--accent hero__overtitle">Photographe — Paris</p>
+        <h1 class="t-display hero__title">
+          <span class="line"><span class="line__inner">Des images</span></span>
+          <span class="line"><span class="line__inner">qui restent</span></span>
+        </h1>
+        <p class="hero__sub">Portrait, paysage, architecture et événements. Je capture les instants qui comptent avec une approche artistique et sincère.</p>
+        <a href="portfolio.html" class="hero__cta">
+          <span>Voir le portfolio</span>
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" stroke-width="1.5"/></svg>
         </a>
       </div>
-    </div>
-  </section>
-  <section class="testimonials" id="testimonials">
-    <div class="container">
-      <h2 data-aos="fade-up">Témoignages</h2>
-      <div class="swiper-container testimonials-swiper" data-aos="fade-up" data-aos-delay="200">
-        <div class="swiper-wrapper">
-          <div class="swiper-slide testimonial-item">
-            <img src="/public/assets/img/testimonial1.jpg" alt="Marie & Pierre" loading="lazy">
-            <p>"Esteban a capturer notre journée spéciale avec une telle grâce et professionnalisme.<br>Les photos sont tout simplement magnifiques."</p>
-            <h4>Marie & Pierre</h4>
-          </div>
-          <div class="swiper-slide testimonial-item">
-            <img src="/public/assets/img/testimonial2.jpg" alt="Jean Dupont" loading="lazy">
-            <p>"Un talent exceptionnel pour la photographie de nature.<br>Chaque image raconte une histoire."</p>
-            <h4>Jean Dupont</h4>
-          </div>
-          <div class="swiper-slide testimonial-item">
-            <img src="/public/assets/img/testimonial3.jpg" alt="Sophie Martin" loading="lazy">
-            <p>"Les photos d'architecture d'Esteban sont incroyablement détaillées et artistiques.<br>Je recommande vivement ses services."</p>
-            <h4>Sophie Martin</h4>
-          </div>
-        </div>
-        <div class="swiper-button-next"></div>
-        <div class="swiper-button-prev"></div>
-        <div class="swiper-pagination"></div>
+      <div class="hero__scroll" aria-hidden="true">
+        <span class="hero__scroll-text">Scroll</span>
+        <div class="hero__scroll-line"></div>
       </div>
-    </div>
-  </section>
-  <section class="blog" id="blog">
-    <div class="container">
-      <h2 data-aos="fade-up">Blog</h2>
-      <div class="blog-grid" data-aos="fade-up" data-aos-delay="200">
-        <article class="blog-post">
-          <img src="/public/assets/img/img-1-min.jpg" alt="Les Meilleures Techniques pour la Photographie de Portrait" loading="lazy">
-          <div class="blog-content">
-            <h3>Les Meilleures Techniques pour la Photographie de Portrait</h3>
-            <p>Découvrez les astuces professionnelles pour capturer des portraits saisissants. 
-              De l'éclairage à la composition, apprenez comment mettre en valeur vos sujets et créer des images mémorables.</p>
-            <a href="/templates/blog-portrait.html" class="btn">Lire la suite</a>
+    </section>
+
+    <!-- Selected Work — showcase strip -->
+    <section class="section" aria-labelledby="work-title">
+      <div class="wrap">
+        <div class="section-header">
+          <div class="section-eyebrow">
+            <span class="section-eyebrow__index">01</span>
+            <span class="section-eyebrow__line"></span>
+            <span class="section-eyebrow__text">Portfolio</span>
           </div>
-        </article>
-        <article class="blog-post">
-          <img src="/public/assets/img/img-h2-min.jpg" alt="Explorer la Photographie de Paysage : Conseils et Inspirations" loading="lazy">
-          <div class="blog-content">
-            <h3>Explorer la Photographie de Paysage : Conseils et Inspirations</h3>
-            <p>Plongez dans le monde de la photographie de paysage avec ces conseils essentiels. 
-              Apprenez à capturer la beauté sauvage et à immortaliser les paysages époustouflants.</p>
-            <a href="/templates/blog-landscape.html" class="btn">Lire la suite</a>
-          </div>
-        </article>
-        <article class="blog-post">
-          <img src="/public/assets/img/img-8-min.jpg" alt="Photographie d'Architecture : Capturer l'Essence des Structures" loading="lazy">
-          <div class="blog-content">
-            <h3>Photographie d'Architecture : Capturer l'Essence des Structures</h3>
-            <p>Apprenez comment mettre en valeur les lignes et les formes des bâtiments avec des techniques avancées de photographie d'architecture. Transformez vos clichés en œuvres d'art.</p>
-            <a href="/templates/blog-architecture.html" class="btn">Lire la suite</a>
-          </div>
-        </article>
-      </div>
-    </div>
-  </section>
-  <section class="instagram-feed" id="instagram">
-    <div class="container">
-      <h2 data-aos="fade-up">Suivez-moi sur Instagram</h2>
-      <div class="instagram-grid" data-aos="fade-up" data-aos-delay="200">
-        <a href="https://instagram.com/estebanluizantonio" target="_blank" aria-label="Instagram Photo 1"><img src="/public/assets/img/img-7-min.jpg" alt="Instagram Photo 1" loading="lazy"></a>
-        <a href="https://instagram.com/estebanluizantonio" target="_blank" aria-label="Instagram Photo 2"><img src="/public/assets/img/img-8-min.jpg" alt="Instagram Photo 2" loading="lazy"></a>
-        <a href="https://instagram.com/estebanluizantonio" target="_blank" aria-label="Instagram Photo 3"><img src="/public/assets/img/img-9-min.jpg" alt="Instagram Photo 3" loading="lazy"></a>
-        <a href="https://instagram.com/estebanluizantonio" target="_blank" aria-label="Instagram Photo 4"><img src="/public/assets/img/img-3-min.jpg" alt="Instagram Photo 4" loading="lazy"></a>
-        <a href="https://instagram.com/estebanluizantonio" target="_blank" aria-label="Instagram Photo 5"><img src="/public/assets/img/img-0-min.jpg" alt="Instagram Photo 5" loading="lazy"></a>
-        <a href="https://instagram.com/estebanluizantonio" target="_blank" aria-label="Instagram Photo 6"><img src="/public/assets/img/img-6-min.jpg" alt="Instagram Photo 6" loading="lazy"></a>
-        <a href="https://instagram.com/estebanluizantonio" target="_blank" aria-label="Instagram Photo 7"><img src="/public/assets/img/img-13-min.jpg" alt="Instagram Photo 7" loading="lazy"></a>
-        <a href="https://instagram.com/estebanluizantonio" target="_blank" aria-label="Instagram Photo 8"><img src="/public/assets/img/img-c0-min.jpg" alt="Instagram Photo 8" loading="lazy"></a>
-        <a href="https://instagram.com/estebanluizantonio" target="_blank" aria-label="Instagram Photo 9"><img src="/public/assets/img/img-14-min.jpg" alt="Instagram Photo 9" loading="lazy"></a>
-        <a href="https://instagram.com/estebanluizantonio" target="_blank" aria-label="Instagram Photo 10"><img src="/public/assets/img/img-10-min.jpg" alt="Instagram Photo 10" loading="lazy"></a>
-        <a href="https://instagram.com/estebanluizantonio" target="_blank" aria-label="Instagram Photo 11"><img src="/public/assets/img/img-11-min.jpg" alt="Instagram Photo 11" loading="lazy"></a>
-        <a href="https://instagram.com/estebanluizantonio" target="_blank" aria-label="Instagram Photo 12"><img src="/public/assets/img/img-12-min.jpg" alt="Instagram Photo 12" loading="lazy"></a>
-      </div>
-    </div>
-  </section>
-  <section class="about" id="about">
-    <div class="container">
-      <h2 data-aos="fade-up">À propos de moi</h2>
-      <div class="about-content" data-aos="fade-up" data-aos-delay="200">
-        <img src="/public/assets/img/esteban-min.jpg" alt="Esteban Luiz" loading="lazy">
-        <div class="about-text">
-          <p>Je suis Esteban Luiz, un photographe passionné par la capture des moments authentiques et des paysages époustouflants. Mon objectif est de raconter des histoires à travers mes images. Avec plusieurs années d'expérience, je m'engage à fournir des photographies de haute qualité qui reflètent la beauté et l'émotion de chaque instant.</p>
-          <a href="#contact" class="btn">Réservez une séance</a>
+          <h2 id="work-title" class="t-h2 reveal">Travaux sélectionnés</h2>
+          <p class="section-header__desc reveal reveal--delay-1">Une sélection de mes projets récents à travers différents univers photographiques.</p>
         </div>
       </div>
-    </div>
-  </section>
-  <section class="contact" id="contact">
-    <div class="container">
-      <h2 data-aos="fade-up">Contactez-moi</h2>
-      <form id="contact-form" data-aos="fade-up" data-aos-delay="200" aria-label="Formulaire de contact">
-        <div class="form-group">
-          <input type="text" id="name" name="user_name" placeholder="Votre nom" required aria-required="true">
-          <input type="email" id="email" name="user_email" placeholder="Votre email" required aria-required="true">
+      <div class="showcase" aria-label="Galerie de photos sélectionnées">
+        <div class="showcase__row" id="showcase-row">
+          <figure class="showcase__item showcase__item--landscape reveal" data-lightbox>
+            <img src="assets/img/img-3-min.jpg" alt="Paysage — lumière dorée sur la nature" width="520" height="347" loading="lazy" decoding="async">
+          </figure>
+          <figure class="showcase__item showcase__item--portrait reveal reveal--delay-1" data-lightbox>
+            <img src="assets/img/img-1-min.jpg" alt="Portrait artistique — regard intense en lumière naturelle" width="380" height="570" loading="lazy" decoding="async">
+          </figure>
+          <figure class="showcase__item showcase__item--landscape reveal reveal--delay-2" data-lightbox>
+            <img src="assets/img/img-8-min.jpg" alt="Architecture — lignes contemporaines et jeux de lumière" width="520" height="347" loading="lazy" decoding="async">
+          </figure>
+          <figure class="showcase__item showcase__item--portrait reveal reveal--delay-3" data-lightbox>
+            <img src="assets/img/img-4-min.jpg" alt="Événement — instant suspendu lors d'une célébration" width="380" height="570" loading="lazy" decoding="async">
+          </figure>
+          <figure class="showcase__item showcase__item--square reveal" data-lightbox>
+            <img src="assets/img/img-0-min.jpg" alt="Paysage urbain — perspective architecturale" width="420" height="420" loading="lazy" decoding="async">
+          </figure>
+          <figure class="showcase__item showcase__item--landscape reveal reveal--delay-1" data-lightbox>
+            <img src="assets/img/img-11-min.jpg" alt="Architecture — symétrie et structures modernes" width="520" height="347" loading="lazy" decoding="async">
+          </figure>
+          <figure class="showcase__item showcase__item--portrait reveal reveal--delay-2" data-lightbox>
+            <img src="assets/img/img-9-min.jpg" alt="Portrait créatif — éclairage dramatique" width="380" height="570" loading="lazy" decoding="async">
+          </figure>
+          <figure class="showcase__item showcase__item--landscape reveal reveal--delay-3" data-lightbox>
+            <img src="assets/img/img-7-min.jpg" alt="Nature — paysage brut et sauvage" width="520" height="347" loading="lazy" decoding="async">
+          </figure>
         </div>
-        <textarea id="message" name="message" rows="5" placeholder="Votre message" required aria-required="true"></textarea>
-        <button type="submit" class="btn">Envoyer</button>
-      </form>
-    </div>
-  </section>
-  <footer class="footer">
-    <div class="container">
-      <p>&copy; 2024 Esteban Luiz. Tous droits réservés.</p>
-      <div class="social">
-        <a href="mailto:estebanluizantonio@gmail.com"><i class="fa-regular fa-envelope"></i></a>
-        <a href="https://instagram.com/estebanluizantonio" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-        <a href="https://twitter.com/estebanluiz_" target="_blank" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
-        <a href="https://linkedin.com/in/esteban-luiz" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-        <a href="https://threads.com.estebanluizantonio" target="_blank" aria-label="Threads"><i class="fa-brands fa-threads"></i></a>
+      </div>
+      <div class="wrap" style="margin-top:var(--s-40)">
+        <a href="portfolio.html" class="arrow-link reveal">
+          <span>Voir tout le portfolio</span>
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" stroke-width="1.5"/></svg>
+        </a>
+      </div>
+    </section>
+
+    <!-- Services -->
+    <section class="section" aria-labelledby="services-title">
+      <div class="wrap">
+        <div class="section-header">
+          <div class="section-eyebrow">
+            <span class="section-eyebrow__index">02</span>
+            <span class="section-eyebrow__line"></span>
+            <span class="section-eyebrow__text">Services</span>
+          </div>
+          <h2 id="services-title" class="t-h2 reveal">Expertises</h2>
+        </div>
+        <div class="grid grid--2">
+          <a href="https://estebanluizantonio.myportfolio.com/portrait" target="_blank" rel="noopener noreferrer" class="service-card reveal">
+            <span class="service-card__num">01</span>
+            <h3>Portrait</h3>
+            <p>Des portraits qui capturent l'essence de chaque personnalité. Studio ou extérieur, lumière naturelle ou travaillée — chaque image révèle ce qui rend unique.</p>
+            <svg class="service-card__arrow" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" stroke-width="1.5"/></svg>
+          </a>
+          <a href="https://estebanluizantonio.myportfolio.com/voyage" target="_blank" rel="noopener noreferrer" class="service-card reveal reveal--delay-1">
+            <span class="service-card__num">02</span>
+            <h3>Paysage</h3>
+            <p>Immortaliser la beauté brute de la nature et ses lumières éphémères. Du lever au coucher du soleil, chaque heure offre une palette unique.</p>
+            <svg class="service-card__arrow" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" stroke-width="1.5"/></svg>
+          </a>
+          <a href="https://estebanluizantonio.myportfolio.com/architecture" target="_blank" rel="noopener noreferrer" class="service-card reveal reveal--delay-2">
+            <span class="service-card__num">03</span>
+            <h3>Architecture</h3>
+            <p>Révéler la géométrie et l'âme des espaces. Compositions saisissantes qui mettent en valeur les lignes, les textures et la lumière des structures.</p>
+            <svg class="service-card__arrow" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" stroke-width="1.5"/></svg>
+          </a>
+          <a href="https://estebanluizantonio.myportfolio.com/mariage" target="_blank" rel="noopener noreferrer" class="service-card reveal reveal--delay-3">
+            <span class="service-card__num">04</span>
+            <h3>Événements & Mariage</h3>
+            <p>Capturer les instants précieux et les émotions authentiques de vos célébrations. Reportage discret et naturel pour des souvenirs sincères.</p>
+            <svg class="service-card__arrow" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" stroke-width="1.5"/></svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- About teaser -->
+    <section class="section" aria-labelledby="about-title">
+      <div class="wrap">
+        <div class="about-layout">
+          <div class="about-img img-reveal reveal">
+            <img
+              src="assets/img/esteban-min.jpg"
+              alt="Esteban Luiz, photographe professionnel à Paris"
+              width="560"
+              height="747"
+              loading="lazy"
+              decoding="async"
+            >
+          </div>
+          <div class="about-text">
+            <div class="section-eyebrow">
+              <span class="section-eyebrow__index">03</span>
+              <span class="section-eyebrow__line"></span>
+              <span class="section-eyebrow__text">À propos</span>
+            </div>
+            <h2 id="about-title" class="t-h2 reveal">Esteban Luiz</h2>
+            <div class="about-desc reveal reveal--delay-1">
+              <p>Photographe passionné basé à Paris, je capture les moments authentiques et les paysages époustouflants. Mon objectif est de raconter des histoires à travers mes images — chaque cliché est une invitation à voir le monde autrement.</p>
+            </div>
+            <div class="stats reveal reveal--delay-2">
+              <div class="stat">
+                <span class="stat__number" data-count="500">0</span>
+                <span class="stat__label">Projets</span>
+              </div>
+              <div class="stat">
+                <span class="stat__number" data-count="8">0</span>
+                <span class="stat__label">Années</span>
+              </div>
+              <div class="stat">
+                <span class="stat__number" data-count="200">0</span>
+                <span class="stat__label">Clients</span>
+              </div>
+            </div>
+            <a href="a-propos.html" class="arrow-link reveal reveal--delay-3">
+              <span>En savoir plus</span>
+              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" stroke-width="1.5"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="section section--sm" aria-labelledby="cta-title" style="text-align:center;">
+      <div class="wrap">
+        <h2 id="cta-title" class="t-h2 reveal" style="margin-bottom:var(--s-16);">Un projet en tête ?</h2>
+        <p class="t-body-lg reveal reveal--delay-1" style="max-width:480px;margin:0 auto var(--s-40);">Discutons de votre vision et créons ensemble des images exceptionnelles.</p>
+        <a href="contact.html" class="hero__cta reveal reveal--delay-2">
+          <span>Me contacter</span>
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" stroke-width="1.5"/></svg>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer" role="contentinfo">
+    <div class="wrap">
+      <div class="footer__inner">
+        <div>
+          <span class="footer__brand">Esteban Luiz</span>
+          <span class="footer__copy">&copy; 2024 — Tous droits réservés</span>
+        </div>
+        <div class="footer__links">
+          <a href="portfolio.html" class="footer__link">Portfolio</a>
+          <a href="a-propos.html" class="footer__link">À propos</a>
+          <a href="contact.html" class="footer__link">Contact</a>
+          <a href="https://instagram.com/estebanluizantonio" target="_blank" rel="noopener noreferrer" class="footer__link">Instagram</a>
+          <a href="https://twitter.com/estebanluiz_" target="_blank" rel="noopener noreferrer" class="footer__link">Twitter</a>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <button class="back-to-top" id="back-to-top" aria-label="Retour en haut de page">
+          <span>Retour en haut</span>
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 19V5M12 5L5 12M12 5L19 12" stroke="currentColor" stroke-width="1.5"/></svg>
+        </button>
       </div>
     </div>
   </footer>
-  <div class="modal" id="image-modal" aria-hidden="true" role="dialog">
-    <span class="close" aria-label="Fermer">&times;</span>
-    <img class="modal-content" id="modal-img" alt="">
-    <span class="prev" aria-label="Image précédente">&#10094;</span>
-    <span class="next" aria-label="Image suivante">&#10095;</span>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-label="Visionneuse d'images" aria-hidden="true">
+    <button class="lightbox__btn lightbox__close" aria-label="Fermer">
+      <svg viewBox="0 0 24 24" fill="none" width="20" height="20" aria-hidden="true"><path d="M18 6L6 18M6 6L18 18" stroke="currentColor" stroke-width="1.5"/></svg>
+    </button>
+    <button class="lightbox__btn lightbox__prev" aria-label="Image précédente">
+      <svg viewBox="0 0 24 24" fill="none" width="18" height="18" aria-hidden="true"><path d="M19 12H5M5 12L12 19M5 12L12 5" stroke="currentColor" stroke-width="1.5"/></svg>
+    </button>
+    <button class="lightbox__btn lightbox__next" aria-label="Image suivante">
+      <svg viewBox="0 0 24 24" fill="none" width="18" height="18" aria-hidden="true"><path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="1.5"/></svg>
+    </button>
+    <div class="lightbox__img-wrap">
+      <img class="lightbox__img" id="lightbox-img" src="" alt="" loading="eager">
+    </div>
+    <div class="lightbox__counter">
+      <span id="lb-current">1</span> / <span id="lb-total">8</span>
+    </div>
   </div>
-  <button id="scrollToTopBtn" title="Retour en haut" aria-label="Retour en haut">
-    <i class="fas fa-arrow-up"></i>
-  </button>
-  <button id="theme-toggle" aria-label="Basculer le thème">
-    <i class="fas fa-sun"></i>
-    <i class="fas fa-moon"></i>
-  </button>
-  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-  <script src="/public/assets/js/main.js"></script>
+
+  <script src="assets/js/app.js" defer></script>
 </body>
 </html>

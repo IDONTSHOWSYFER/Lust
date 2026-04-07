@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://estebanluiz.fr/</loc><changefreq>monthly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://estebanluiz.fr/portfolio.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://estebanluiz.fr/a-propos.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://estebanluiz.fr/contact.html</loc><changefreq>yearly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://estebanluiz.fr/blog/techniques-portrait.html</loc><lastmod>2024-04-01</lastmod><priority>0.6</priority></url>
+  <url><loc>https://estebanluiz.fr/blog/photographie-architecture.html</loc><lastmod>2024-05-01</lastmod><priority>0.6</priority></url>
+  <url><loc>https://estebanluiz.fr/blog/photographie-paysage.html</loc><lastmod>2024-06-01</lastmod><priority>0.6</priority></url>
+</urlset>
